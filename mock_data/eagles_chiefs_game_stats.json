@@ -1,0 +1,109 @@
+{
+    "matches": [
+        {
+            "date": "2023-11-20",
+            "event": "Regular Season Game",
+            "result": "Philadelphia Eagles 21 - Kansas City Chiefs 17",
+            "key_statistics": {
+                "Philadelphia Eagles": {
+                    "Jalen Hurts": {
+                        "passing": {
+                            "completions": 14,
+                            "attempts": 22,
+                            "yards": 150
+                        },
+                        "rushing": {
+                            "yards": "N/A",
+                            "touchdowns": 2
+                        }
+                    },
+                    "D'Andre Swift": {
+                        "rushing": {
+                            "yards": 76,
+                            "carries": 12,
+                            "touchdowns": 1
+                        },
+                        "receiving": {
+                            "yards": 31
+                        }
+                    },
+                    "DeVonta Smith": {
+                        "receiving": {
+                            "receptions": 6,
+                            "yards": 99
+                        }
+                    }
+                },
+                "Kansas City Chiefs": {
+                    "Patrick Mahomes": {
+                        "passing": {
+                            "completions": 24,
+                            "attempts": 43,
+                            "yards": 177,
+                            "touchdowns": 2,
+                            "interceptions": 1
+                        }
+                    },
+                    "Isiah Pacheco": {
+                        "rushing": {
+                            "yards": 89,
+                            "carries": 19
+                        }
+                    },
+                    "Travis Kelce": {
+                        "receiving": {
+                            "receptions": 7,
+                            "yards": 44
+                        }
+                    }
+                }
+            },
+            "summary": "The Philadelphia Eagles rallied from a 10-point halftime deficit to win. Their defense forced key turnovers, shutting out the Kansas City Chiefs in the second half."
+        },
+        {
+            "date": "2025-02-09",
+            "event": "Super Bowl LIX",
+            "result": "Philadelphia Eagles 40 - Kansas City Chiefs 22",
+            "key_statistics": {
+                "Philadelphia Eagles": {
+                    "Jalen Hurts": {
+                        "passing": {
+                            "completions": 17,
+                            "attempts": 22,
+                            "yards": 221,
+                            "touchdowns": 2,
+                            "interceptions": 1
+                        },
+                        "rushing": {
+                            "yards": 72,
+                            "touchdowns": 1
+                        }
+                    },
+                    "Saquon Barkley": {
+                        "rushing": {
+                            "carries": 25,
+                            "yards": 57
+                        },
+                        "records": {
+                            "total_season_postseason_yards": 2504
+                        }
+                    }
+                },
+                "Kansas City Chiefs": {
+                    "Patrick Mahomes": {
+                        "passing": {
+                            "completions": 21,
+                            "attempts": 32,
+                            "yards": 257,
+                            "touchdowns": 3,
+                            "interceptions": 2
+                        },
+                        "sacks": 6,
+                        "fumbles_lost": 1
+                    }
+                }
+            },
+            "summary": "The Philadelphia Eagles' defense dominated, holding the Kansas City Chiefs to just 23 first-half yards. Rookie Cooper DeJean contributed a 38-yard interception return for a touchdown."
+        }
+    ]
+}
