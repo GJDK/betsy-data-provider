@@ -36,6 +36,7 @@ exports.getWinner = async (req, res) => {
         console.log('🧠 Prompt:', prompt);
 
         // Call Ollama API
+        console.log('📡 Calling Ollama API...', OLLAMA_URL);
         const response = await axios.post(OLLAMA_URL, {
             model: MODEL_NAME,
             prompt: prompt,
