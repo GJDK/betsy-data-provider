@@ -8,9 +8,9 @@ const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
 // Ollama API settings
 // const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Ollama API endpoint
-// const OLLAMA_URL = 'http://10.2.129.11:11434/api/generate'; // Ollama API endpoint - Bharathi linux server
-const OLLAMA_URL =
-    'http://192.168.0.6:11434/api/generate';
+ const OLLAMA_URL = 'http://10.2.129.11:11434/api/generate'; // Ollama API endpoint - Bharathi linux server
+// const OLLAMA_URL =
+//     'http://192.168.0.6:11434/api/generate';
 const MODEL_NAME = 'qwen2.5:3b'; // Model name
 
 // Handle GET /getWinner request
