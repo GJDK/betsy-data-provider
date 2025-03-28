@@ -7,8 +7,8 @@ const filePath = path.join(__dirname, '../mock_data/eagles_chiefs_game_stats.jso
 const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
 // Ollama API settings
-// const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Ollama API endpoint
- const OLLAMA_URL = 'http://10.2.129.11:11434/api/generate'; // Ollama API endpoint - Bharathi linux server
+ const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Ollama API endpoint
+//  const OLLAMA_URL = 'http://10.2.129.11:11434/api/generate'; // Ollama API endpoint - Bharathi linux server
 // const OLLAMA_URL =
 //     'http://192.168.0.6:11434/api/generate';
 const MODEL_NAME = 'qwen2.5:3b'; // Model name
@@ -23,13 +23,12 @@ exports.getWinner = async (req, res) => {
     }
 
     // Get the latest match data
-    const latestMatch = mockData.matches[mockData.matches.length - 1];
+    const latestMatch = mockData.matchups[mockData.matchups.length - 1];
 
     try {
         // Updated prompt to return full team name
         const prompt = `
-      Based on this data, who has the higher probability to win in the match Philadelphia Eagles and Kansas City Chiefs ? Give me the result alone without details.
-
+      Based on this data, who has the higher probability to win in the match? Give me the result alone without details.
       ${JSON.stringify(latestMatch, null, 2)}
     `;
 

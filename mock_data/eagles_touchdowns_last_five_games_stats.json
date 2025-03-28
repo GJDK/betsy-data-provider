@@ -1,0 +1,43 @@
+{
+    "PhiladelphiaEagles": {
+      "last_five_games": [
+        {
+          "week": 10,
+          "opponent": "Dallas Cowboys",
+          "score": "34-6",
+          "touchdowns": 4,
+          "key_performance": "Jalen Hurts accounted for four touchdowns."
+        },
+        {
+          "week": 11,
+          "opponent": "Washington Commanders",
+          "score": "26-18",
+          "touchdowns": 3,
+          "key_performance": "A 39-yard rushing touchdown by Saquon Barkley."
+        },
+        {
+          "week": 12,
+          "opponent": "Los Angeles Rams",
+          "score": "37-20",
+          "touchdowns": 4,
+          "key_performance": "Saquon Barkley rushed for 255 yards, contributing significantly to the team's four touchdowns."
+        },
+        {
+          "week": 13,
+          "opponent": "Baltimore Ravens",
+          "score": "24-19",
+          "touchdowns": 3,
+          "key_performance": "A pivotal pass to Dallas Goedert."
+        },
+        {
+          "week": 15,
+          "opponent": "Pittsburgh Steelers",
+          "score": "27-13",
+          "touchdowns": 3,
+          "key_performance": "Three touchdowns secured the victory despite early turnovers."
+        }
+      ],
+      "total_touchdowns_last_five_games": 15
+    }
+  }
+  
