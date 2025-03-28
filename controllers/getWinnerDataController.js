@@ -1,17 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
+const config = require('../config');
 
 // Load mock data
 const filePath = path.join(__dirname, '../mock_data/eagles_chiefs_game_stats.json');
-const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-// Ollama API settings
- const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Ollama API endpoint
-//  const OLLAMA_URL = 'http://10.2.129.11:11434/api/generate'; // Ollama API endpoint - Bharathi linux server
-// const OLLAMA_URL =
-//     'http://192.168.0.6:11434/api/generate';
-const MODEL_NAME = 'qwen2.5:3b'; // Model name
+const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8')); 
 
 // Handle GET /getWinner request
 exports.getWinner = async (req, res) => {
@@ -35,9 +29,9 @@ exports.getWinner = async (req, res) => {
         console.log('🧠 Prompt:', prompt);
 
         // Call Ollama API
-        console.log('📡 Calling Ollama API...', OLLAMA_URL);
-        const response = await axios.post(OLLAMA_URL, {
-            model: MODEL_NAME,
+        console.log('📡 Calling Ollama API...', config.OLLAMA_URL);
+        const response = await axios.post(config.OLLAMA_URL, {
+            model: config.MODEL_NAME,
             prompt: prompt,
             stream: false, // Get a complete response
         });

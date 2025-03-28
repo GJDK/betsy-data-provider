@@ -1,14 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
+const config = require('../config');
 
 // Load mock data
 const filePath = path.join(__dirname, '../mock_data/eagles_touchdowns_last_five_games_stats.json');
 const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-// Ollama API settings
-const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Ollama API endpoint
-const MODEL_NAME = 'qwen2.5:3b'; // Model name
 
 // Handle GET /getTouchDowns request
 exports.getTouchDowns = async (req, res) => {
@@ -35,11 +32,11 @@ exports.getTouchDowns = async (req, res) => {
 
     console.log('🧠 Prompt:', prompt);
   
-    console.log('📡 Calling Ollama API...', OLLAMA_URL);
+    console.log('📡 Calling Ollama API...', config.OLLAMA_URL);
     try {
       // Send the prompt to Ollama and get the response
-      const ollamaResponse = await axios.post(OLLAMA_URL, {
-        model: MODEL_NAME,
+      const ollamaResponse = await axios.post(config.OLLAMA_URL, {
+        model: config.MODEL_NAME,
         prompt: prompt,
         stream: false
       });
