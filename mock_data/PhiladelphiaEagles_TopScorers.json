@@ -1,0 +1,24 @@
+{
+    "top_scorers": [
+        {
+            "name": "Jalen Hurts",
+            "position": "QB",
+            "passing_touchdowns": 22,
+            "rushing_touchdowns": 13,
+            "total_points": 210
+        },
+        {
+            "name": "Jake Elliott",
+            "position": "Kicker",
+            "field_goals": 34,
+            "extra_points": 48,
+            "total_points": 150
+        },
+        {
+            "name": "A.J. Brown",
+            "position": "WR",
+            "receiving_touchdowns": 11,
+            "total_points": 66
+        }
+    ]
+}

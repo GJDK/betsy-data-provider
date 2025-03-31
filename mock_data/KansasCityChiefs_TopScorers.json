@@ -1,0 +1,24 @@
+{
+    "top_scorers": [
+        {
+            "name": "Patrick Mahomes",
+            "position": "QB",
+            "passing_touchdowns": 31,
+            "rushing_touchdowns": 3,
+            "total_points": 204
+        },
+        {
+            "name": "Harrison Butker",
+            "position": "Kicker",
+            "field_goals": 30,
+            "extra_points": 44,
+            "total_points": 134
+        },
+        {
+            "name": "Travis Kelce",
+            "position": "TE",
+            "receiving_touchdowns": 10,
+            "total_points": 60
+        }
+    ]
+}
