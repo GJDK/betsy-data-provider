@@ -1,0 +1,34 @@
+{
+    "matchups": [
+        {
+            "date": "2008-10-05",
+            "event": "Regular Season Game",
+            "result": "Arizona Cardinals 41 - Buffalo Bills 17",
+            "winner": "Arizona Cardinals"
+        },
+        {
+            "date": "2012-10-14",
+            "event": "Regular Season Game",
+            "result": "Buffalo Bills 19 - Arizona Cardinals 16 (OT)",
+            "winner": "Buffalo Bills"
+        },
+        {
+            "date": "2016-09-25",
+            "event": "Regular Season Game",
+            "result": "Buffalo Bills 33 - Arizona Cardinals 18",
+            "winner": "Buffalo Bills"
+        },
+        {
+            "date": "2020-11-15",
+            "event": "Regular Season Game",
+            "result": "Arizona Cardinals 32 - Buffalo Bills 30",
+            "winner": "Arizona Cardinals"
+        },
+        {
+            "date": "2024-09-08",
+            "event": "Regular Season Game",
+            "result": "Buffalo Bills 34 - Arizona Cardinals 28",
+            "winner": "Buffalo Bills"
+        }
+    ]
+}

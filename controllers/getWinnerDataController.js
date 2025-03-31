@@ -4,15 +4,24 @@ const axios = require('axios');
 const config = require('../config');
 
 // Load mock data
-const filePath = path.join(__dirname, '../mock_data/eagles_chiefs_game_stats.json');
-const mockData = JSON.parse(fs.readFileSync(filePath, 'utf-8')); 
+const eaglesChiefsFilePath = path.join(__dirname, '../mock_data/eagles_chiefs_game_stats.json');
+const cardinalsBillsFilePath = path.join(__dirname, '../mock_data/cardinals_bills_game_stats.json');
+
+const eaglesChiefsData = JSON.parse(fs.readFileSync(eaglesChiefsFilePath, 'utf-8'));
+const cardinalsBillsData = JSON.parse(fs.readFileSync(cardinalsBillsFilePath, 'utf-8'));
 
 // Handle GET /getWinner request
 exports.getWinner = async (req, res) => {
     const { match } = req.query;
 
+    let mockData;
+
     // Check for valid match parameter
-    if (match !== 'PhiladelphiaEaglesVsKansasCityChiefs') {
+    if (match === 'PhiladelphiaEaglesVsKansasCityChiefs') {
+        mockData = eaglesChiefsData;
+    } else if (match === 'ArizonaCardinalsVsBuffaloBills') {
+        mockData = cardinalsBillsData;
+    } else {
         return res.status(400).json({ error: 'Match not found or invalid match parameter.' });
     }
 
@@ -43,7 +52,7 @@ exports.getWinner = async (req, res) => {
         let ollamaResponse = response.data.response?.trim();
 
         // Handle unexpected responses gracefully
-        if (!ollamaResponse || (!ollamaResponse.includes('Eagles') && !ollamaResponse.includes('Chiefs'))) {
+        if (!ollamaResponse || (!ollamaResponse.includes('Eagles') && !ollamaResponse.includes('Chiefs') && !ollamaResponse.includes('Cardinals') && !ollamaResponse.includes('Bills'))) {
             console.warn('⚠️ Unexpected response from Ollama:', ollamaResponse);
             ollamaResponse = 'Unknown Winner';
         }
