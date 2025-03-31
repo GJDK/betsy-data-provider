@@ -1,0 +1,64 @@
+{
+    "matchups": [
+        {
+            "date": "2024-12-01",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 44 - Cincinnati Bengals 38",
+            "winner": "Pittsburgh Steelers"
+        },
+        {
+            "date": "2025-01-04",
+            "event": "Regular Season Game",
+            "result": "Cincinnati Bengals 19 - Pittsburgh Steelers 17",
+            "winner": "Cincinnati Bengals"
+        },
+        {
+            "date": "2023-11-20",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 27 - Cincinnati Bengals 24",
+            "winner": "Pittsburgh Steelers"
+        },
+        {
+            "date": "2022-09-11",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 23 - Cincinnati Bengals 20 (OT)",
+            "winner": "Pittsburgh Steelers"
+        },
+        {
+            "date": "2021-11-28",
+            "event": "Regular Season Game",
+            "result": "Cincinnati Bengals 41 - Pittsburgh Steelers 10",
+            "winner": "Cincinnati Bengals"
+        },
+        {
+            "date": "2021-09-26",
+            "event": "Regular Season Game",
+            "result": "Cincinnati Bengals 24 - Pittsburgh Steelers 10",
+            "winner": "Cincinnati Bengals"
+        },
+        {
+            "date": "2020-12-21",
+            "event": "Regular Season Game",
+            "result": "Cincinnati Bengals 27 - Pittsburgh Steelers 17",
+            "winner": "Cincinnati Bengals"
+        },
+        {
+            "date": "2020-11-15",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 36 - Cincinnati Bengals 10",
+            "winner": "Pittsburgh Steelers"
+        },
+        {
+            "date": "2019-11-24",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 16 - Cincinnati Bengals 10",
+            "winner": "Pittsburgh Steelers"
+        },
+        {
+            "date": "2018-12-30",
+            "event": "Regular Season Game",
+            "result": "Pittsburgh Steelers 16 - Cincinnati Bengals 13",
+            "winner": "Pittsburgh Steelers"
+        }
+    ]
+}

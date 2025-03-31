@@ -6,9 +6,11 @@ const config = require('../config');
 // Load mock data
 const eaglesChiefsFilePath = path.join(__dirname, '../mock_data/eagles_chiefs_game_stats.json');
 const cardinalsBillsFilePath = path.join(__dirname, '../mock_data/cardinals_bills_game_stats.json');
+const steelersBengalsFilePath = path.join(__dirname, '../mock_data/steelers_bengals_game_stats.json');
 
 const eaglesChiefsData = JSON.parse(fs.readFileSync(eaglesChiefsFilePath, 'utf-8'));
 const cardinalsBillsData = JSON.parse(fs.readFileSync(cardinalsBillsFilePath, 'utf-8'));
+const steelersBengalsData = JSON.parse(fs.readFileSync(steelersBengalsFilePath, 'utf-8'));
 
 // Handle GET /getWinner request
 exports.getWinner = async (req, res) => {
@@ -21,6 +23,8 @@ exports.getWinner = async (req, res) => {
         mockData = eaglesChiefsData;
     } else if (match === 'ArizonaCardinalsVsBuffaloBills') {
         mockData = cardinalsBillsData;
+    } else if (match === 'PittsburghSteelersVsCincinnatiBengals') {
+        mockData = steelersBengalsData;
     } else {
         return res.status(400).json({ error: 'Match not found or invalid match parameter.' });
     }
@@ -31,7 +35,7 @@ exports.getWinner = async (req, res) => {
     try {
         // Updated prompt to return full team name
         const prompt = `
-      Based on this data, who has the higher probability to win in the match? Give me the result alone without details.
+      Based on this data, who has the higher probability to win in the match? Provide the result alone without additional details.
       ${JSON.stringify(latestMatch, null, 2)}
     `;
 
@@ -52,7 +56,15 @@ exports.getWinner = async (req, res) => {
         let ollamaResponse = response.data.response?.trim();
 
         // Handle unexpected responses gracefully
-        if (!ollamaResponse || (!ollamaResponse.includes('Eagles') && !ollamaResponse.includes('Chiefs') && !ollamaResponse.includes('Cardinals') && !ollamaResponse.includes('Bills'))) {
+        if (
+            !ollamaResponse ||
+            (!ollamaResponse.includes('Eagles') &&
+                !ollamaResponse.includes('Chiefs') &&
+                !ollamaResponse.includes('Cardinals') &&
+                !ollamaResponse.includes('Bills') &&
+                !ollamaResponse.includes('Steelers') &&
+                !ollamaResponse.includes('Bengals'))
+        ) {
             console.warn('⚠️ Unexpected response from Ollama:', ollamaResponse);
             ollamaResponse = 'Unknown Winner';
         }
